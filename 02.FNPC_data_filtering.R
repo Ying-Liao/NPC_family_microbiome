@@ -11,8 +11,6 @@ ps <- phyloseq(otu_table(seqtab, taxa_are_rows=FALSE),
                sample_data(samdf),
                tax_table(taxa))
 
-ps
-
 dna <- Biostrings::DNAStringSet(taxa_names(ps)) 
 colnames(otu_table(seqtab, taxa_are_rows=FALSE)) == taxa_names(ps) 
 row.names(taxa) == taxa_names(ps)
